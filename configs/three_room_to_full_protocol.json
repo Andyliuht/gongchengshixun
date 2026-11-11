@@ -1,0 +1,59 @@
+{
+  "training": "fixed 3 rooms, 59904 steps",
+  "evaluation_generator": {
+    "min_dist": 5,
+    "max_dist": 7,
+    "mean_rooms": 15,
+    "std_rooms": 2,
+    "connectivity": 0.5,
+    "puzzle_density": 0.1,
+    "allowed_puzzles": [
+      "boulder"
+    ],
+    "key_puzzle_prob": 0.3,
+    "puzzle_required": false
+  },
+  "test_maps": [
+    70000,
+    70001,
+    70002,
+    70003,
+    70004,
+    70005,
+    70006,
+    70007
+  ],
+  "model_seeds": [
+    41,
+    42,
+    43
+  ],
+  "groups": [
+    "A",
+    "A2",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "max_episode_steps": 1000,
+  "sampling": "deterministic=False",
+  "reward_parameters": {
+    "wall_collision_reward": -0.15,
+    "first_cell_bonus": 0.025,
+    "revisit_penalty_scale": 0.03,
+    "revisit_penalty_cap": 0.09
+  },
+  "discovery_reward": 0.1,
+  "guidance": {
+    "kind": "observable_rule_limited_intervention",
+    "maximum_rule_actions_per_episode": 200,
+    "maximum_consecutive_rule_actions": 8,
+    "cooldown_ppo_actions": 12,
+    "stagnation_steps_trigger": 20,
+    "trigger_visible_key": true,
+    "trigger_visible_boulder_switch": true,
+    "trigger_rejected_door": true
+  }
+}

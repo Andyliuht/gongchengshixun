@@ -1,0 +1,19 @@
+{
+  "protocol": "17.0-unified-strategy-audit",
+  "parent_config": "experiment_config_v13.json",
+  "map_seeds": [70000, 70001, 70002, 70003, 70004, 70005, 70006, 70007],
+  "train_seeds": [41, 42, 43],
+  "groups": ["A", "A2", "B", "C", "D", "E"],
+  "max_episode_steps": 1000,
+  "action_selection": "sampled",
+  "model_weights_frozen": true,
+  "scoring": {
+    "success": "environment termination at exit",
+    "first_subgoal": "first actual room crossing, key acquisition, boulder puzzle completion, exit success; missing retained as missing",
+    "action_in_space": "action is integer 0..3",
+    "move_accepted": "room or local position changes, boulder moves, or exit reached",
+    "rule_reason_supported": "reason and target corroborated by current visible room or observed guide memory",
+    "trace_consistent": "logged action and event agree with environment audit",
+    "goal_hint_consistent": "one-hot goal, target offset and current visible target agree"
+  }
+}

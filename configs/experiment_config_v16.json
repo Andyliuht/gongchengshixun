@@ -1,0 +1,19 @@
+{
+  "protocol_version": "16.0-fixed-vs-procedural-ABCDE",
+  "parent_environment_config": "experiment_config_v13.json",
+  "fixed_train_map_seed": 10007,
+  "fixed_map_selection": "first training-range seed with both key lock and boulder puzzle, no model scores consulted",
+  "procedural_train_map_seeds": [10000, 10199],
+  "training_groups_with_new_weights": ["A", "B", "E"],
+  "derived_groups": {"C": "A weights plus frozen limited rule actions", "D": "B weights plus frozen limited rule actions"},
+  "model_seeds": [41, 42, 43],
+  "steps_per_run": 59904,
+  "per_run_wall_minutes_limit": 20,
+  "development_map_seeds": [20000, 20007],
+  "sealed_test_map_seeds": [60000, 60007],
+  "seen_map_evaluation_seed": 10007,
+  "max_episode_steps": 1000,
+  "action_selection": "sampled",
+  "optional_llm_calls": 0,
+  "maximum_total_wall_hours_unchanged": 16
+}

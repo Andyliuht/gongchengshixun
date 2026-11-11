@@ -1,0 +1,80 @@
+{
+  "generator_config": {
+    "min_dist": 1,
+    "max_dist": 2,
+    "mean_rooms": 3,
+    "std_rooms": 0,
+    "connectivity": 0.5,
+    "puzzle_density": 0.35,
+    "allowed_puzzles": [
+      "boulder"
+    ],
+    "key_puzzle_prob": 0.5,
+    "puzzle_required": false
+  },
+  "train_seeds": {
+    "start": 10000,
+    "count": 200
+  },
+  "test_maps": [
+    70000,
+    70001,
+    70002,
+    70003,
+    70005,
+    70007,
+    70012,
+    70022
+  ],
+  "test_types": {
+    "plain": [
+      70000,
+      70001
+    ],
+    "key": [
+      70002,
+      70003,
+      70005
+    ],
+    "puzzle": [
+      70007,
+      70012,
+      70022
+    ]
+  },
+  "model_seeds": [
+    41,
+    42,
+    43
+  ],
+  "checkpoints": [
+    59904,
+    99840
+  ],
+  "episode_limit": 1000,
+  "groups": [
+    "A",
+    "A2",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "reward_parameters": {
+    "wall_collision_reward": -0.15,
+    "first_cell_bonus": 0.025,
+    "revisit_penalty_scale": 0.03,
+    "revisit_penalty_cap": 0.09
+  },
+  "discovery_reward": 0.1,
+  "guidance": {
+    "kind": "observable_rule_limited_intervention",
+    "maximum_rule_actions_per_episode": 200,
+    "maximum_consecutive_rule_actions": 8,
+    "cooldown_ppo_actions": 12,
+    "stagnation_steps_trigger": 20,
+    "trigger_visible_key": true,
+    "trigger_visible_boulder_switch": true,
+    "trigger_rejected_door": true
+  }
+}

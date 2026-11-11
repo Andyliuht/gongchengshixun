@@ -1,0 +1,74 @@
+{
+  "protocol_version": "9.0-diminishing-cell-novelty",
+  "environment_id": "BoltCrypt-v0",
+  "generator_config": {
+    "min_dist": 5,
+    "max_dist": 7,
+    "mean_rooms": 15,
+    "std_rooms": 2,
+    "connectivity": 0.5,
+    "puzzle_density": 0.0,
+    "allowed_puzzles": [
+      "boulder"
+    ],
+    "key_puzzle_prob": 0.0,
+    "puzzle_required": false
+  },
+  "seeds": {
+    "train": {
+      "start": 10000,
+      "count": 200
+    },
+    "validation": {
+      "start": 20000,
+      "count": 40
+    },
+    "test": {
+      "start": 30000,
+      "count": 40
+    }
+  },
+  "max_episode_steps": 1000,
+  "training": {
+    "algorithm": "PPO",
+    "steps_per_run": 59904,
+    "maximum_wall_minutes_per_run": 20,
+    "run_seeds": [
+      41,
+      42,
+      43
+    ],
+    "groups": [
+      "A",
+      "B"
+    ],
+    "maximum_total_training_steps": 359424,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 2,
+    "device": "cpu"
+  },
+  "evaluation": {
+    "maps_per_split": 40,
+    "max_episodes_per_group_and_run_seed": 40,
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  "exploration": {
+    "type": "RoomDiscoveryReward",
+    "discovery_reward": 0.1
+  },
+  "optional_llm": {
+    "required": false,
+    "maximum_parameters_billions": 3,
+    "maximum_calls_total": 300,
+    "maximum_wall_hours": 2
+  },
+  "maximum_total_wall_hours": 16,
+  "wall_collision_reward": -0.1,
+  "first_cell_bonus": 0.025
+}
