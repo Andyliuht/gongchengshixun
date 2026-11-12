@@ -1,0 +1,66 @@
+{
+  "protocol": {
+    "size": 7,
+    "train_maps": [
+      1000,
+      1199
+    ],
+    "test_maps": [
+      6000,
+      6079
+    ],
+    "model_seeds": [
+      41,
+      42,
+      43
+    ],
+    "steps_per_model": 30000,
+    "max_episode_steps": 40
+  },
+  "summary": {
+    "baseline": {
+      "wins": 9,
+      "episodes": 240,
+      "mean_reward": -0.4902,
+      "mean_unique_cells": 7.45
+    },
+    "goal_hint": {
+      "wins": 49,
+      "episodes": 240,
+      "mean_reward": -0.1221,
+      "mean_unique_cells": 8.9
+    }
+  },
+  "train_seconds": [
+    {
+      "condition": "baseline",
+      "model_seed": 41,
+      "seconds": 18.17
+    },
+    {
+      "condition": "baseline",
+      "model_seed": 42,
+      "seconds": 17.9
+    },
+    {
+      "condition": "baseline",
+      "model_seed": 43,
+      "seconds": 18.03
+    },
+    {
+      "condition": "goal_hint",
+      "model_seed": 41,
+      "seconds": 18.72
+    },
+    {
+      "condition": "goal_hint",
+      "model_seed": 42,
+      "seconds": 18.45
+    },
+    {
+      "condition": "goal_hint",
+      "model_seed": 43,
+      "seconds": 18.52
+    }
+  ]
+}

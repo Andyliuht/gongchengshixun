@@ -1,0 +1,65 @@
+{
+  "protocol": {
+    "train_maps": [
+      1000,
+      1199
+    ],
+    "test_maps": [
+      6000,
+      6079
+    ],
+    "model_seeds": [
+      41,
+      42,
+      43
+    ],
+    "steps_per_model": 30000,
+    "max_episode_steps": 40
+  },
+  "summary": {
+    "B_explore": {
+      "wins": 3,
+      "episodes": 240,
+      "mean_unique_cells": 6.81,
+      "mean_reward": -0.674
+    },
+    "B_plus_E": {
+      "wins": 15,
+      "episodes": 240,
+      "mean_unique_cells": 7.75,
+      "mean_reward": -0.4694
+    }
+  },
+  "train_seconds": [
+    {
+      "condition": "B_explore",
+      "model_seed": 41,
+      "seconds": 41.3
+    },
+    {
+      "condition": "B_explore",
+      "model_seed": 42,
+      "seconds": 24.15
+    },
+    {
+      "condition": "B_explore",
+      "model_seed": 43,
+      "seconds": 18.31
+    },
+    {
+      "condition": "B_plus_E",
+      "model_seed": 41,
+      "seconds": 18.6
+    },
+    {
+      "condition": "B_plus_E",
+      "model_seed": 42,
+      "seconds": 18.93
+    },
+    {
+      "condition": "B_plus_E",
+      "model_seed": 43,
+      "seconds": 18.77
+    }
+  ]
+}
